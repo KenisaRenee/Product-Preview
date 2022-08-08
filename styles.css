@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+:root {
+    --container-background: hsl(30, 38%, 92%);
+    --card-background: hsl(0, 0%, 100%);
+    --header: hsl(212, 21%, 14%);
+    --paragraph: hsl(228, 12%, 48%);
+    --button: hsl(158, 36%, 37%);
+    --button-hover: hsl(158, 49%, 23%);
+}
+
+body {
+    max-width: 100%;
+    text-rendering: optimizeSpeed;
+    background-color: var(--container-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--card-background);
+    max-width: 37rem;
+    border-radius: .6rem;
+}
+
+img, picture {
+    max-width: 100%;
+    min-height: 100%;
+    display: block;
+    border-radius: .6rem 0 0 .6rem;
+}
+
+.details {
+    display: grid;
+    padding: 2rem;
+    width: 100%;
+}
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+h1 {
+    color: var(--header);
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 1;
+    margin: 1.4rem 0;
+}
+
+p {
+    color: var(--paragraph);
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    margin: 1.4rem 0;
+}
+
+.sale-price {
+    font-family: 'Fraunces', serif;
+    color: var(--button);
+    font-weight: bold;
+    font-size: 1.9rem;
+    margin-right: 1.2rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+button {
+   background-color: var(--button);
+   border: none;
+   border-radius: .5rem;
+   width: 100%;
+   color: var(--card-background);
+   font-family: 'Montserrat', serif;
+   font-size: 14px;
+   padding: 1em;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: var(--button-hover);
+    transition: ease-in-out .17s;
+}
+
+button:focus {
+    background-color: var(--paragraph);
+}
+
+.icon {
+    margin-right: .8rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        border-radius: .6rem;
+        max-width: 21rem;
+        max-height: 100%;
+    }
+    img {
+        border-radius: .6rem .6rem 0 0;
+    }
+    .details {
+        padding:  1.4rem;
+    }
+    h1 {
+        margin: 1rem 0;
+        font-size: 30px;
+    }
+}
+
